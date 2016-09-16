@@ -180,5 +180,9 @@ module Squall
       response = request(:get, "/users/#{id}/limits.json")
       response["limits"]
     end
+
+    def find_by_name(name)
+      response = request(:get, "/users.json?q=#{name}")
+    end
   end
 end

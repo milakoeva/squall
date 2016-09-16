@@ -183,6 +183,7 @@ module Squall
 
     def find_by_name(name)
       response = request(:get, "/users.json?q=#{name}")
+      response.collect { |user| user['user'] }
     end
   end
 end

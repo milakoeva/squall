@@ -28,6 +28,7 @@ module Squall
   autoload :NetworkZone,    'squall/network_zone'
   autoload :HypervisorZone, 'squall/hypervisor_zone'
   autoload :Disk,           'squall/disk'
+  autoload :LocationGroup,  'squall/location_group'
 
   extend self
 

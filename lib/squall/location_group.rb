@@ -1,5 +1,5 @@
 module Squall
-  # OnApp Hypervisor
+  # OnApp Location Group
   class LocationGroup < Base
     # Public: Lists all location groups.
     #

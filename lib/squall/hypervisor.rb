@@ -59,7 +59,7 @@ module Squall
     # id - ID of the hypervisor
     #
     # Returns a Hash.
-    def reboot(id)
+    def reboot(id)v
       response = request(:get, "/settings/hypervisors/#{id}/rebooting.json")
       response['hypervisor']
     end
@@ -75,7 +75,7 @@ module Squall
 
     # TODO: Add documentation
     def virtual_machines(id)
-      response = request(:get, "/settings/hypervisors/#{id}/virtual_machines.json")
+      response = request(:get, "/hypervisors/#{id}/virtual_machines.json")
       response.collect { |vm| vm['virtual_machine'] }
     end
 

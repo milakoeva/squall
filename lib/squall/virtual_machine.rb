@@ -294,10 +294,10 @@ module Squall
     # Returns a Hash.
     def ip_addresses(id)
       response = request(:get, "/virtual_machines/#{id}/ip_addresses.json")
-      response['ip_address_join']
+      response.collect { |ip| ip['ip_address_join'] }
     end
 
-    # Public: Segregate a virtual machine from another virtual machine.
+    # Public: Get specific network interface of the virtual machine.
     #
     # id                   - ID of the virtual machine
     # network_interface_id - ID of a network interface joined to the 

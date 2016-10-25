@@ -286,5 +286,15 @@ module Squall
       response = request(:post, "/virtual_machines/#{id}/vm_stats.json")
       response['virtual_machine']
     end
+
+    # Public: Get ip addresses for a virtual machine.
+    #
+    # id - ID of the virtual machine
+    #
+    # Returns a Hash.
+    def ip_addresses(id)
+      response = request(:get, "/virtual_machines/#{id}/ip_addresses.json")
+      response['virtual_machine']
+    end
   end
 end

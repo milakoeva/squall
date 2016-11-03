@@ -6,7 +6,7 @@ module Squall
     # Returns an Array.
     def list
       req = request(:get, '/billing/user/plans.json')
-      req.collect { |bp| bp['user_plan'] }
+      req.collect { |up| up['user_plan'] }
     end
 
     # Public: Retrieves billing plan info.

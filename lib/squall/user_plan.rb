@@ -1,12 +1,12 @@
 module Squall
-  # OnApp Billing Plan
-  class BillingPlan < Base
+  # OnApp User Billing Plan
+  class UserPlan < Base
     # Public: Lists all billing plans.
     #
     # Returns an Array.
     def list
       req = request(:get, '/billing/user/plans.json')
-      req.collect { |bp| bp['billing_plan'] }
+      req.collect { |bp| bp['user_plan'] }
     end
 
     # Public: Retrieves billing plan info.

@@ -29,7 +29,7 @@ module Squall
   autoload :HypervisorZone, 'squall/hypervisor_zone'
   autoload :Disk,           'squall/disk'
   autoload :LocationGroup,  'squall/location_group'
-  autoload :BillingPlan,    'squall/billing_plan'
+  autoload :UserPlan,    'squall/user_plan'
 
   extend self
 

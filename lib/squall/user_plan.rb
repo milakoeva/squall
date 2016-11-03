@@ -1,6 +1,6 @@
 module Squall
-  # OnApp Billing Plan
-  class BillingPlan < Base
+  # OnApp User Billing Plan
+  class UserPlan < Base
     # Public: Lists all billing plans.
     #
     # Returns an Array.

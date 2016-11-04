@@ -54,7 +54,7 @@ module Squall
     # 
     # Returns a Hash.
     def add_resource(id, options = {})
-      req = request(:post, "/billing/user/plans#{id}/resources.json", query: { resource: options } )
+      req = request(:post, "/billing/user/plans/#{id}/resources.json", query: { resource: options } )
       req.first[1]
     end
   end

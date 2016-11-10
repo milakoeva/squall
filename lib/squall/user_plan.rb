@@ -15,8 +15,7 @@ module Squall
     #
     # Returns a Hash.
     def show(id)
-      req = request(:get, "/billing/user/plans/#{id}.json")
-      req.first[1]
+      request(:get, "/billing/user/plans/#{id}.json")
     end
 
     # Public: Create a new billing plan.
@@ -36,8 +35,7 @@ module Squall
     #
     # Returns a Hash.
     def create(options = {})
-      req = request(:post, '/billing/user/plans.json', default_params(options))
-      req.first[1]
+      request(:post, '/billing/user/plans.json', default_params(options))
     end
 
     # Public: Add resources to billing plan.
@@ -54,8 +52,7 @@ module Squall
     # 
     # Returns a Hash.
     def add_resource(id, options = {})
-      req = request(:post, "/billing/user/plans/#{id}/resources.json", query: { resource: options } )
-      req.first[1]
+      request(:post, "/billing/user/plans/#{id}/resources.json", query: { resource: options } )
     end
   end
 end

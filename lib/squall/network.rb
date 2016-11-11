@@ -38,7 +38,6 @@ module Squall
     # Returns a Hash.
     def create(options = {})
       response = request(:post, '/settings/networks.json', default_params(options))
-      response.first[1]
     end
 
     # Public: Edit a Network

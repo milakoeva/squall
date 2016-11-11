@@ -9,6 +9,16 @@ module Squall
       response.collect { |network| network['network'] }
     end
 
+    # Public: Get the details for a network.
+    #
+    # id - ID of the network
+    #
+    # Returns an Hash.
+    def show(id)
+      response = request(:get, "/settings/networks/#{id}.json")
+      response['network']
+    end
+
     # Public: Create a Network.
     #
     # options - Params for creating the Network:
